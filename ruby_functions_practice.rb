@@ -19,7 +19,7 @@ def divide(first_number, second_number)
 end
 
 def length_of_string(string)
-  return string.length
+  return string.length()
 end
 
 def join_string(string_1, string_2)
@@ -90,15 +90,22 @@ def number_to_short_month_name(month_number)
   else
     return "error"
   end
+  #alternative
+  # full_name = number_to_full_month_name(number)
+  # return full_name[0..2]
+  # or
+  #return number_to_full_month_name(number)[0..2]
 end
 
-def volume_of_cube(length, width, height)
-  return length * width * height
+def volume_of_cube(length)
+  return length ** 3
 end
 
 def volume_of_sphere(radius)
   answer = 4/3.to_f * Math::PI * radius**3
   return answer.round(0)
+  # alternative
+  # return (4/3.to_f * Math::PI * radius**3).round(0)
 end
 
 def fahrenheit_to_celsius(temperature)
